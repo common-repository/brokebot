@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+#brokebot-frontend-widget-loader {
+   position: absolute;
+   right: 10px;
+   bottom: 10px;
+   -webkit-box-shadow: 2px 2px 4px 0px rgba(158,158,158,1);
+   -moz-box-shadow: 2px 2px 4px 0px rgba(158,158,158,1);
+   box-shadow: 2px 2px 4px 0px rgba(158,158,158,1);
+   opacity: 1;
+   cursor: pointer;
+   overflow: hidden;
+}
+#brokebot-frontend-widget-loader.closed {
+    border-radius: 50%;
+    background-color: #A20911;
+    height: 60px;
+    width: 60px;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: 50% calc(50% - 3px);
+    -webkit-animation: scaleUp .4s;
+    animation: scaleUp .4s;
+    -webkit-transform: scale(0,0); 
+    transform: scale(0,0);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+}
+#brokebot-frontend-widget-loader .icon {
+   background-image: url(__PLUGIN_URL__/assets/brokebothead_default_white.svg);
+   height: 60px;
+   width: 60px;
+   background-repeat: no-repeat;
+   background-position: center 10px;
+   background-size: 80%;
+   background-color: transparent;
+}
+#brokebot-frontend-widget-loader.active {
+   border-radius: 50%;
+   background-image: linear-gradient(169deg, rgba(8,102,242,1) 0%, rgba(162,9,17,1) 100%);
+   height: 60px;
+   width: 60px;
+   background-repeat: no-repeat;
+}
+.commentbox-wrapper {
+   background-color: #fff;
+   max-width: 300px;
+   max-height: 180px;
+   padding: 10px 20px;
+   font-size: 15px;
+   position: absolute;
+   right: 77px;
+   bottom: 16px;
+   box-sizing: border-box;
+   border-radius: 8px;
+   box-shadow: 0 2px 6px 0 rgba(0,0,0,.4);
+   font-family: 'Open Sans', sans-serif;
+}
+.commentbox-arrow {
+   display: block;
+   position: absolute;
+   content: "";
+   width: 10px;
+   height: 10px;
+   right: -10px;
+   bottom: 10px;
+   background-color: inherit;
+   transform: translateX(-6px) rotate(45deg);
+   pointer-events: none;
+   box-shadow: 2px -2px 2px 0 rgba(0,0,0,.2);
+}
+.broke-counter {
+   border-radius: 50%;
+   border: 1px solid rgba(255,255,255,.6);
+   background-color: #000;
+   color: #fff;
+   width: 14px;
+   height: 14px;
+   position: absolute;
+   right: 10px;
+   bottom: 60px;
+   font-size: 9px;
+   text-align: center;
+   font-family: 'Open Sans', sans-serif;
+   box-sizing: border-box;
+   -webkit-animation: scaleUp .4s;
+   animation: scaleUp .4s;
+   -webkit-transform: scale(0,0); 
+   transform: scale(0,0);
+   -webkit-animation-fill-mode: forwards;
+   animation-fill-mode: forwards;
+   animation-timing-function: ease-out;
+   -webkit-animation-timing-function: ease-out;
+   opacity: 1;
+}
+.broke-counter span {
+   display: block;
+}
+.engaged {
+   width: 96% !important;
+   height: 98% !important;
+   border-radius: 4px !important;
+   transition: all 0.5s ease;
+   background: linear-gradient(180deg, rgba(8,102,242,1) 0%, rgba(148,17,28,1) 20%, rgba(162,9,7,1) 100%) !important;
+}
+.engaged .icon {
+    border-radius: 50%;
+    border: 2px solid rgba(0,0,0,.9);
+    background-color: #fff !important;
+    transition: all 0.5s ease;
+    background-image: url(__PLUGIN_URL__/assets/brokebothead_default.svg) !important;
+    width: 50px !important;
+    height: 50px !important;
+    background-position: center 7px !important;
+    margin: 10px;
+}
+.chatwindow {
+   height: 290px;
+   width: 100%;
+   background-color: #efefef;
+   position:absolute;
+   left: 0;
+   bottom: 30px;
+   padding: 20px;
+   box-sizing: border-box;
+   -webkit-animation: scaleUp .4s;
+   animation: scaleUp .4s;
+   -webkit-transform: scale(1,0); 
+   transform: scale(1,0);
+   -webkit-animation-fill-mode: forwards;
+   animation-fill-mode: forwards;
+   animation-timing-function: ease-out;
+   -webkit-animation-timing-function: ease-out;
+}
+.chatwindow.post {
+   -webkit-animation: fadein .4s;
+   animation: fadein .4s;
+   transform: scale(1);
+}
+.chatfooter {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   height: 30px;
+   width: 100%;
+   color: #222;
+   font-size: 12px;
+   background-color: #fff;
+   font-family: 'Open Sans', sans-serif;
+   box-sizing: border-box;
+   padding: 4px 8px;
+   display: flex;
+   justify-content: space-between;
+}
+.chatfooter .footer-link-privacy {
+   color: #A2A2A2;
+   text-decoration: none;
+} 
+.chattitle {
+   position: absolute;
+   top: 24px;
+   left: 80px;
+   font-size: 20px;
+   color: #fff;
+   font-family: 'Open Sans', sans-serif;
+}
+.chatclose {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   color: #fff;
+   font-family: 'Open Sans', sans-serif;
+}
+.closeicon {
+   background-image: url(__PLUGIN_URL__/assets/close.svg);
+   width: 20px;
+   height: 20px;
+   margin: 14px 10px 0 0;
+}
+.chat-item {
+   font-family: 'Open Sans', sans-serif;
+   display: flex;
+   flex-wrap: wrap;
+   position: relative;
+   margin-bottom: 40px;
+}
+.chatauthor {
+   width: 100%;
+   font-size: 11px;
+   color: #c4c4c4;
+   font-family: 'Open Sans', sans-serif;
+   margin-bottom: 4px;
+   margin-left: 30px;
+}
+.chat-item.brokebot .chaticon {
+   width: 20px;
+   height: 20px;
+   background-color: #A20911;
+   background-image: url(__PLUGIN_URL__/assets/brokebothead_default_white.svg);
+   border-radius: 50%;
+   background-repeat: no-repeat;
+   background-size: 70%;
+   background-position: center 4px;
+   position: absolute;
+   bottom: 0;
+}
+.chat-item.brokebot .chattext {
+   display: inline-block;
+   font-size: 13px;
+   color: #333;
+   margin-left: 30px;
+   padding: 5px;
+   background-color: #fff;
+   border-radius: 6px;
+}
+.chat-button.brokebot a {
+   color: #0866f2;
+   text-decoration: none;
+   background-color: transparent;
+   border: 1px solid #0866f2;
+   padding: 10px;
+   border-radius: 6px;
+   font-family: 'Open Sans', sans-serif;
+   transition: all .5s ease;
+}
+.chat-button.brokebot a:hover {
+   background-color: #0866f2;
+   color: #fff;
+}
+@-webkit-keyframes scaleUp {
+   100% {
+       -webkit-transform: scale(1,1); 
+   }
+}
+
+@keyframes scaleUp {
+   100% {
+       transform: scale(1,1); 
+   }
+}
+
+@-webkit-keyframes scaleX {
+   100% {
+       -webkit-transform: scale(1,1); 
+   }
+}
+
+@keyframes scaleX {
+   100% {
+       transform: scale(1,1); 
+   }
+}
+
+@keyframes zoomInLeft {
+   from {
+      opacity: 0;
+      zoom: 0; /* Old IE only */
+      -moz-transform: scale(0);
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      transform-origin: center right;
+   }
+ 
+   100% {
+      opacity: 1;
+      zoom: 1; /* Old IE only */
+      -moz-transform: scale(1);
+      -webkit-transform: scale(1);
+      transform: scale(1);
+   }
+ }
+ 
+ .zoomInLeft {
+   animation: zoomInLeft .3s;
+ }
+
+ .loading {
+   font-size: 30px;
+   text-align: center;
+ }
+ 
+ .loading:after {
+   overflow: hidden;
+   display: inline-block;
+   vertical-align: bottom;
+   -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
+   animation: ellipsis steps(4,end) 900ms infinite;
+   content: "\2026"; /* ascii code for the ellipsis character */
+   width: 0px;
+ }
+ 
+ @keyframes ellipsis {
+   to {
+     width: 1.25em;    
+   }
+ }
+ 
+ @-webkit-keyframes ellipsis {
+   to {
+     width: 1.25em;    
+   }
+ }
+ @keyframes fadein {
+   from { opacity: 0; }
+   to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+   from { opacity: 0; }
+   to   { opacity: 1; }
+}

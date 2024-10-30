@@ -1,0 +1,120 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+ .wrap fieldset {
+    display: block;
+    margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap
+ }
+ .wrap fieldset p {
+     width: 100%
+ }
+ .wrap fieldset input[type="text"],
+ .wrap fieldset input[type="email"],
+ .wrap fieldset input[type="url"],
+ .wrap fieldset select,
+ .wrap fieldset textarea {
+    width: 100%
+}
+.no-margin {
+    margin: 0 !important;
+}
+
+#brokebot-settings-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+div.reset-cookies,
+p.submit {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#brokebot-settings-form fieldset {
+    padding: 10px;
+    box-sizing: border-box;
+}
+@media (min-width: 768px) {
+    #brokebot-settings-form fieldset {
+        width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    #brokebot-settings-form fieldset {
+        width: 100%;
+    }
+}
+.select2 {
+    width:100%!important;
+}
+.support-wrapper {
+    display: flex;
+    flex-wrap: wrap; 
+}
+@media (min-width: 768px) {
+    .support-wrapper .support-left,
+    .support-wrapper .support-right {
+        width: 50%;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+}
+@media (max-width: 767px) {
+    .support-wrapper .support-left,
+    .support-wrapper .support-right {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+}
+#brokebot-support-form fieldset {
+    margin-bottom: 20px;
+}
+#brokebot-support-form label {
+    display: flex;
+}
+#brokebot-support-form label p {
+    width: 100px;
+}
+#brokebot-support-form label input,
+#brokebot-support-form label textarea {
+    flex: 1;
+}
+
+
+#brokebot-settings-form fieldset div.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+#brokebot-settings-form fieldset > div,
+#brokebot-settings-form fieldset label {
+    flex: 1;
+    box-sizing: border-box;
+}
+
+#brokebot-settings-form fieldset label,
+#brokebot-settings-form fieldset label span {
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    #brokebot-settings-form fieldset label {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    #brokebot-settings-form fieldset div.wrapper > div {
+        width: 100%;
+    }
+}
+
+@media (min-width: 601px) {
+    #brokebot-settings-form fieldset label {
+        width: 25%;
+    }
+    #brokebot-settings-form fieldset div.wrapper > div {
+        width: 75%;
+    }
+}
